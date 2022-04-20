@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ 
+
+</head>
+<body>
+    <title>Document</title>
+    <title>Get URL Parameters</title>  
+
+    <form action="bokningssida.html">
+        <input type="text" name="Företagsnamn" placeholder="Företagsnamn..."/>
+        <input type="text" name="Beskrivning" placeholder="Beskrivning..."/>
+        <input type="text" name="Tider" placeholder="Tider att boka..."/>
+        <input type="submit"/>
+    </form>
+
+
+
+
+
+    <script>
+
+        function myFunction() 
+        {
+        console.log("klickade")
+        const params = (new URL(document.location)).searchParams
+        const paramFöretagsnamn = params.get('Företagsnamn')
+        const paramBeskrivning = params.get('Beskrivning')
+        const paramTider = params.get('Tider')
+
+        let nyurl = "bokningssida.html?Företagsnamn=" + paramFöretagsnamn + "&Beskrivning=" + paramBeskrivning + "&Tider=" + paramTider
+
+        location.replace(nyurl)
+        }
+    </script>
+
+    
+</body>
+</html>

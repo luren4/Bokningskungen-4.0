@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylebokning.css">
+
+
+</head>
+<body>
+    <div class="bakgrund">
+
+        <h2 class="toptext">
+            <span id="Företagsnamn">
+        </h2>
+        <h2 class="beskrivning">
+            <span id="Beskrivning">
+        </h2>
+        <h2 class="tidertext">
+            Bokbara tider:
+        </h2>
+
+        <h2 class="tider">
+            <span id="Tider">
+        </h2>
+
+
+        <a href="bokahär.html">Boka</a>
+
+
+        <script> 
+            function getParameter( parameterName ) 
+            {
+                let parameters = new URLSearchParams( window.location.search ); 
+                return parameters.get( parameterName ); 
+            }
+
+        document.getElementById("Företagsnamn").innerHTML = getParameter("Företagsnamn")
+        document.getElementById("Beskrivning").innerHTML = getParameter("Beskrivning")
+        document.getElementById("Tider").innerHTML = getParameter("Tider")
+
+        </script>
+
+
+
+    </div>
+</body>
+</html>
+
+
